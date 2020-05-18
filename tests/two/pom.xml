@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.jvnet.jaxb2.maven2</groupId>
-		<artifactId>maven-jaxb2-plugin-tests</artifactId>
-		<version>0.14.1-SNAPSHOT</version>
+		<artifactId>jaxb2-maven-plugin-tests</artifactId>
+		<version>0.15.0-SNAPSHOT</version>
 	</parent>
 	<dependencies>
 		<dependency>
@@ -23,7 +23,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<artifactId>maven-jaxb2-plugin-tests-two</artifactId>
+	<artifactId>jaxb2-maven-plugin-tests-two</artifactId>
 	<packaging>jar</packaging>
 	<name>Maven JAXB 2.x Plugin Tests [two]</name>
 	<build>
@@ -31,7 +31,7 @@
 		<plugins>
 			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
 				<executions>
 					<execution>
 						<id>generate</id>

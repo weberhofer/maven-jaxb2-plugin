@@ -1,12 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>maven-jaxb2-plugin-tests-res</artifactId>
+	<artifactId>jaxb2-maven-plugin-tests-res</artifactId>
 	<parent>
 		<groupId>org.jvnet.jaxb2.maven2</groupId>
-		<artifactId>maven-jaxb2-plugin-tests</artifactId>
-		<version>0.14.1-SNAPSHOT</version>
+		<artifactId>jaxb2-maven-plugin-tests</artifactId>
+		<version>0.15.0-SNAPSHOT</version>
 	</parent>
 	<packaging>jar</packaging>
 	<name>Maven JAXB 2.x Plugin Tests [res]</name>
@@ -17,29 +17,27 @@
 		</dependency>
 		<dependency>
 			<groupId>org.jvnet.jaxb2.maven2</groupId>
-			<artifactId>maven-jaxb2-plugin-tests-po</artifactId>
+			<artifactId>jaxb2-maven-plugin-tests-po</artifactId>
 			<version>${project.version}</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.jvnet.jaxb2.maven2</groupId>
-			<artifactId>maven-jaxb2-plugin-testing</artifactId>
+			<artifactId>jaxb2-maven-plugin-tests-po-scd</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jvnet.jaxb2.maven2</groupId>
+			<artifactId>jaxb2-maven-plugin-testing</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin-tests-po</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
 				<executions>
 					<execution>
 						<id>generate</id>
@@ -49,7 +47,7 @@
 						<configuration>
 							<extension>true</extension>
 							<!-- This is a problem -->
-							<!--forceRegenerate>true</forceRegenerate-->
+							<!--forceRegenerate>true</forceRegenerate -->
 							<catalog>src/main/resources/catalog.cat</catalog>
 							<schemas>
 								<schema>
@@ -69,17 +67,14 @@
 								<schema>
 									<dependencyResource>
 										<groupId>org.jvnet.jaxb2.maven2</groupId>
-										<artifactId>maven-jaxb2-plugin-tests-po</artifactId>
-										<!-- Can be defined in project dependencies or dependency management -->
-										<!--version>${project.version}</version-->
+										<artifactId>jaxb2-maven-plugin-tests-po</artifactId>
 										<resource>purchaseorder.xsd</resource>
 									</dependencyResource>
 								</schema>
 								<schema>
 									<dependencyResource>
 										<groupId>org.jvnet.jaxb2.maven2</groupId>
-										<artifactId>maven-jaxb2-plugin-tests-po-scd</artifactId>
-										<version>${project.version}</version>
+										<artifactId>jaxb2-maven-plugin-tests-po-scd</artifactId>
 										<resource>purchaseorder.xsd</resource>
 									</dependencyResource>
 								</schema>

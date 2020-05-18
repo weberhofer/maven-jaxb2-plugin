@@ -1,25 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jvnet.jaxb2.maven2</groupId>
-	<artifactId>maven-jaxb2-plugin-project</artifactId>
-	<version>0.14.1-SNAPSHOT</version>
+	<artifactId>jaxb2-maven-plugin-project</artifactId>
+	<version>0.15.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Maven JAXB 2.x Plugin Project</name>
 	<description>Maven2 plugin for JAXB 2.x XJC compiler to generate Java sources from XML Schemas.</description>
-	<url>https://github.com/highsource/maven-jaxb2-plugin</url>
+	<url>https://github.com/highsource/jaxb2-maven-plugin</url>
 	<licenses>
 		<license>
 			<name>BSD-Style License</name>
-			<url>https://github.com/highsource/maven-jaxb2-plugin/blob/master/LICENSE</url>
+			<url>https://github.com/highsource/jaxb2-maven-plugin/blob/master/LICENSE</url>
 			<distribution>repo</distribution>
 			<comments>Maven JAXB2 Plugin license is the 3-clause BSD license which is compatible with GPL. Maven JAXB2 Plugin license does not require you to include any acknowledgments for Maven JAXB2 Plugin in advertising materials for your software.</comments>
 		</license>
 	</licenses>
 	<inceptionYear>2006</inceptionYear>
 	<scm>
-		<connection>scm:svn:https://svn.java.net/svn/maven-jaxb2-plugin~svn/trunk</connection>
-		<developerConnection>scm:svn:https://svn.java.net/svn/maven-jaxb2-plugin~svn/trunk</developerConnection>
-		<url>http://java.net/projects/maven-jaxb2-plugin/sources/svn/show/trunk</url>
+		<connection>scm:svn:https://svn.java.net/svn/jaxb2-maven-plugin~svn/trunk</connection>
+		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-maven-plugin~svn/trunk</developerConnection>
+		<url>http://java.net/projects/jaxb2-maven-plugin/sources/svn/show/trunk</url>
 	</scm>
 	<developers>
 		<developer>
@@ -42,23 +42,23 @@
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.version>2.0.9</maven.version>
+		<maven.version>3.6.3</maven.version>
 		<jaxb20.version>2.0.5</jaxb20.version>
 		<jaxb21.version>2.1.13</jaxb21.version>
 		<jaxb22.version>2.2.11</jaxb22.version>
-		<jaxb23.version>2.3.1</jaxb23.version>
+		<jaxb23.version>2.3.0.1</jaxb23.version>
 		<jaxb-api.version>2.3.1</jaxb-api.version>
 		<jaxb.version>${jaxb23.version}</jaxb.version>
-		<stax-ex.version>1.7.8</stax-ex.version>
-		<fastinfoset.version>1.2.13</fastinfoset.version>
+		<stax-ex.version>1.8.3</stax-ex.version>
+		<fastinfoset.version>1.2.18</fastinfoset.version>
 		<xsom.version>20140925</xsom.version>
-		<dtd-parser.version>1.2</dtd-parser.version>
+		<dtd-parser.version>1.4.3</dtd-parser.version>
 		<istack.version>3.0.5</istack.version>
 		<activation.version>1.2.0</activation.version>
 		<jaxb2-basics.version>0.12.0</jaxb2-basics.version>
-		<maven.plugin.testing.version>2.1</maven.plugin.testing.version>
-		<maven.plugin.plugin.version>3.5</maven.plugin.plugin.version>
-		<slf4j.version>1.7.25</slf4j.version>
+		<maven.plugin.testing.version>3.3.0</maven.plugin.testing.version>
+		<maven.plugin.plugin.version>3.6.0</maven.plugin.plugin.version>
+		<slf4j.version>1.7.30</slf4j.version>
 	</properties>
 	<profiles>
 		<profile>
@@ -149,6 +149,7 @@
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement-->
+	<!--
 	<distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
@@ -159,6 +160,7 @@
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
+	-->
 	<dependencies>
 		<!-- JUnit -->
 		<dependency>
@@ -262,40 +264,41 @@
 			</dependency>
 			<dependency>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin-core</artifactId>
+				<artifactId>jaxb2-maven-plugin-core</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb20-plugin</artifactId>
+				<artifactId>jaxb20-maven-plugin</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb21-plugin</artifactId>
+				<artifactId>jaxb21-maven-plugin</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb22-plugin</artifactId>
+				<artifactId>jaxb22-maven-plugin</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb23-plugin</artifactId>
+				<artifactId>jaxb23-maven-plugin</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin-testing</artifactId>
+				<artifactId>jaxb2-maven-plugin-testing</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<!-- Maven plugin and api classes -->
+
 			<dependency>
 				<groupId>org.apache.maven</groupId>
 				<artifactId>maven-artifact</artifactId>
@@ -338,9 +341,14 @@
 				<version>${maven.plugin.plugin.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-compat</artifactId>
+				<version>${maven.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.8.1</version>
+				<version>4.13</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.maven.plugin-testing</groupId>
@@ -357,7 +365,7 @@
 			<dependency>
 				<groupId>org.codehaus.plexus</groupId>
 				<artifactId>plexus-interpolation</artifactId>
-				<version>1.9</version>
+				<version>1.26</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
@@ -368,13 +376,14 @@
 			<dependency>
 				<groupId>org.codehaus.plexus</groupId>
 				<artifactId>plexus-utils</artifactId>
-				<version>1.5.15</version>
+				<version>3.3.0</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.2.1</version>
+				<version>3.10</version>
 			</dependency>
+
 			<!-- SLF4J -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -409,20 +418,23 @@
 								<goal>descriptor</goal>
 							</goals>
 						</execution>
+						<!-- TODO!
 						<execution>
-							<id>help-goal</id>
+							<id>generated-helpmojo</id>
 							<goals>
 								<goal>helpmojo</goal>
 							</goals>
 						</execution>
+						 -->
 					</executions>
 				</plugin>
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.7.0</version>
+					<version>3.8.1</version>
 					<configuration>
-						<source>1.7</source>
-						<target>1.7</target>
+						<source>1.8</source>
+						<target>1.8</target>
+						<release>8</release>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -433,54 +445,22 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>3.1.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.0.0</version>
+					<version>3.2.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>3.2.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
-					<version>3.0.0</version>
-				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.maven.plugins
-										</groupId>
-										<artifactId>
-											maven-plugin-plugin
-										</artifactId>
-										<versionRange>
-											[3.2,)
-										</versionRange>
-										<goals>
-											<goal>helpmojo</goal>
-											<goal>descriptor</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
+					<version>3.6.0</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

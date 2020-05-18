@@ -4,16 +4,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.jvnet.jaxb2.maven2</groupId>
-		<artifactId>maven-jaxb2-plugin-tests-episodes</artifactId>
-		<version>0.14.1-SNAPSHOT</version>
+		<artifactId>jaxb2-maven-plugin-tests-episodes</artifactId>
+		<version>0.15.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>maven-jaxb2-plugin-tests-episodes-d</artifactId>
+	<artifactId>jaxb2-maven-plugin-tests-episodes-d</artifactId>
 	<packaging>jar</packaging>
 	<name>Maven JAXB 2.x Plugin Tests [episodes:d]</name>
 	<dependencies>
 		<dependency>
 			<groupId>org.jvnet.jaxb2.maven2</groupId>
-			<artifactId>maven-jaxb2-plugin-tests-episodes-a</artifactId>
+			<artifactId>jaxb2-maven-plugin-tests-episodes-a</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -23,21 +23,16 @@
 		<plugins>
 			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb22-plugin</artifactId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
 				<configuration>
 					<extension>true</extension>
 					<episodes>
 						<episode>
 							<groupId>org.jvnet.jaxb2.maven2</groupId>
-							<artifactId>maven-jaxb2-plugin-tests-episodes-a</artifactId>
+							<artifactId>jaxb2-maven-plugin-tests-episodes-a</artifactId>
+							<version>${project.version}</version>
 						</episode>
 					</episodes>
-					<!--plugins>
-						<plugin>
-							<groupId>org.jvnet.jaxb2.maven2</groupId>
-							<artifactId>maven-jaxb2-plugin-tests-episodes-a</artifactId>
-						</plugin>
-					</plugins-->
 					<catalog>src/main/resources/catalog.cat</catalog>
 				</configuration>
 			</plugin>
