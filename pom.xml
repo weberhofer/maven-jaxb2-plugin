@@ -48,6 +48,7 @@
 		<jaxb22.version>2.2.11</jaxb22.version>
 		<jaxb23.version>2.3.0.1</jaxb23.version>
 		<jaxb-api.version>2.3.1</jaxb-api.version>
+		<jaxb-runtime.version>2.3.3</jaxb-runtime.version>
 		<jaxb.version>${jaxb23.version}</jaxb.version>
 		<stax-ex.version>1.8.3</stax-ex.version>
 		<fastinfoset.version>1.2.18</fastinfoset.version>
@@ -174,7 +175,7 @@
 			<dependency>
 				<groupId>org.glassfish.jaxb</groupId>
 				<artifactId>jaxb-runtime</artifactId>
-				<version>${jaxb.version}</version>
+				<version>${jaxb-runtime.version}</version>
 			</dependency>
 			<!-- Start of jaxb-runtime dependencies -->
 			<dependency>
